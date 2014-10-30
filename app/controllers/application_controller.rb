@@ -52,6 +52,7 @@ class ApplicationController < ActionController::Base
   end
 
   def store_location
+    return unless request.get?
     session[:return_to] = request.request_uri
   end
 
